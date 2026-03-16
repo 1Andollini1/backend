@@ -33,8 +33,12 @@ public class Rsvp {
     @Column(length = 500)
     private String questions;
 
+    @Column(name = "is_not_single")
+    private Boolean isNotSingle;
+
     @Column(length = 500)
     private String secondGuestName;
+
     @Column(length = 500)
     private String allergic;
 
@@ -70,8 +74,13 @@ public class Rsvp {
         return questions;
     }
 
-    public Boolean getIsNotSingle() { return willCome; }
-    public void setIsNotSingle(Boolean willCome) { this.willCome = willCome; }
+    public Boolean getIsNotSingle() {
+        return isNotSingle;
+    }
+
+    public void setIsNotSingle(Boolean isNotSingle) {
+        this.isNotSingle = isNotSingle;
+    }
 
     public String getSecondGuestName() {return secondGuestName;}
     public void setSecondGuestName(String secondGuestName) {this.secondGuestName = secondGuestName;}
